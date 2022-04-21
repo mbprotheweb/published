@@ -1,0 +1,470 @@
+[
+    {
+        "stop": {
+            "id": "MTASBWY:F30",
+            "code": null,
+            "name": "18 Av",
+            "lat": 40.629753,
+            "lon": -73.976975,
+            "url": null,
+            "cluster": null,
+            "parentStation": "F30"
+        },
+        "alerts": [
+            {
+                "alertHeaderText": "Manhattan-bound [E][F] trains skip 75 Av",
+                "alertDescriptionText": "For service to this station, take the [E] or [F] to Forest Hills-71 Av and transfer to a Jamaica Center-bound [E] or Jamaica-bound [F].\n\nFor service from this station, take the [E] or [F] to Kew Gardens-Union Tpke and transfer to a Manhattan-bound [E] or [F].\n\nWhat's happening?\nTrack maintenance",
+                "alertUrl": null,
+                "effectiveStartDate": 1650678300000,
+                "effectiveEndDate": 1650877200000,
+                "createdAtDate": 1647879864000,
+                "updatedAtDate": 1648217779000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-17-12"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Stations Skipped",
+                "humanReadableActivePeriod": "Apr 22 - 25, Fri 9:45 PM to Mon 5:00 AM",
+                "id": "lmm:planned_work:3584"
+            },
+            {
+                "alertHeaderText": "[F] trains run local in both directions between 21 St-Queensbridge and Forest Hills-71 Av",
+                "alertDescriptionText": "What's happening?\nPreventive maintenance",
+                "alertUrl": null,
+                "effectiveStartDate": 1652500860000,
+                "effectiveEndDate": 1653296400000,
+                "createdAtDate": 1649779846000,
+                "updatedAtDate": 1650376929000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-20-10",
+                    "B-21-11"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Express to Local",
+                "humanReadableActivePeriod": "May 14 - 16 and May 21 - 23, Sat 12:01 AM to Mon 5:00 AM",
+                "id": "lmm:planned_work:3833"
+            },
+            {
+                "alertHeaderText": "No [F] trains between Church Av and Coney Island-Stillwell Av",
+                "alertDescriptionText": "[F] trains run between Jamaica-179 St and Church Av.\n\nNearby [D][N][Q] trains and local buses provide alternate service between Church Av and Coney Island-Stillwell Av.\n\nFor direct service between Manhattan/Downtown Brooklyn and Coney Island, take the [D][N] or [Q] instead.\n\nFor W 8 St-NY Aquarium , take the [Q] instead.\n\nManhattan transfer stations:\n34 St-Herald Sq accessibility icon | [F] and [D][N][Q]\nW 4 St-Wash Sq accessibility icon | [D][F]\nBroadway-Lafayette St accessibility icon | [D][F]\n\nBrooklyn transfer stations:\nAtlantic Av-Barclays Ctr accessibility icon | [D][N][Q]\n4 Av-9 St [F] and [N]\nConey Island-Stillwell Av accessibility icon | [D][N][Q]\n\nWhat's happening?\nWe're modernizing signals on the Culver Line",
+                "alertUrl": null,
+                "effectiveStartDate": 1651283100000,
+                "effectiveEndDate": 1653296400000,
+                "createdAtDate": 1648562946000,
+                "updatedAtDate": 1650548547000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": [
+                    {
+                        "notes": "accessibility icon | [F][G]\nB35 - Church Av at McDonald Av\nConnect with the [D] at 9 Av or [Q] at Church Av",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F27"
+                    },
+                    {
+                        "notes": "B35 - McDonald Av at Church Av\nConnect with the [D] at 9 Av or [Q] at Church Av\nB8 - McDonald Av at 18 Av\nConnect with the [Q] at Newkirk Plaza or the [N] at 18 Av",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F29"
+                    },
+                    {
+                        "notes": "B8 - 18 Av at McDonald Av\nConnect with the [Q] at Newkirk Plaza or the [N] at 18 Av",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F30"
+                    },
+                    {
+                        "notes": "B11 - Avenue I at McDonald Av\nConnect with the [Q] at Avenue J or the [D] at 50 St",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F31"
+                    },
+                    {
+                        "notes": "B6 - Bay Pkwy at McDonald Av\nConnect with the [Q] at Avenue J or the [N] at Bay Pkwy",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F32"
+                    },
+                    {
+                        "notes": "Nearby Bay Pkwy [N] station\nB9 - 60 St/Avenue N at McDonald Av\nConnect with the [Q] at Avenue M",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F33"
+                    },
+                    {
+                        "notes": "B82 - Kings Hwy at McDonald Av\nConnect with the [Q] at Kings Hwy or the [N] at Kings Hwy\nB9 - 60 St/Avenue N at McDonald Av\nConnect with the [Q] at Avenue M",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F34"
+                    },
+                    {
+                        "notes": "Nearby Kings Hwy [N] station\nB82 - Kings Hwy at McDonald Av\nConnect with the [Q] at Kings Hwy accessibility icon or the [N] at Kings Hwy",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F35"
+                    },
+                    {
+                        "notes": "Nearby Avenue U [N] station\nB3 - Avenue U at McDonald Av\nConnect with [N] at Avenue U or the [Q] at Avenue U",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F36"
+                    },
+                    {
+                        "notes": "Nearby 86 St [N] station\nB1 - Avenue X at McDonald Av/Shell Rd\nConnect with the [Q] at Ocean Pkwy\nConnect with the [N] at 86 St\nB4 - Shell Rd at Bouck Ct/Avenue X\nConnect with the [N] at 86 St",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F38"
+                    },
+                    {
+                        "notes": "Nearby W 8 St-NY Aquarium [Q] station\nB68 - Neptune Av at W 6 St\nConnect with the [D] [N] [Q] at Coney Island-Stillwell Av or the [Q] at Ocean Pkwy",
+                        "agencyId": "MTASBWY",
+                        "stopId": "F39"
+                    },
+                    {
+                        "notes": "[Q]",
+                        "agencyId": "MTASBWY",
+                        "stopId": "D42"
+                    },
+                    {
+                        "notes": "accessibility icon | [D][N][Q]",
+                        "agencyId": "MTASBWY",
+                        "stopId": "D43"
+                    }
+                ],
+                "servicePlanNumbers": [
+                    "B-18-11",
+                    "B-19-09",
+                    "B-20-13",
+                    "B-21-14"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Part Suspended",
+                "humanReadableActivePeriod": "Fri 9:45 PM to Mon 5:00 AM, Apr 29 - May 23",
+                "id": "lmm:planned_work:3653"
+            },
+            {
+                "alertHeaderText": "Coney Island-bound [F] trains skip 4 Av-9 St, 15 St-Prospect Park, Fort Hamilton Pkwy, Ditmas Av, Avenue I, Bay Pkwy, Avenue N and Avenue P",
+                "alertDescriptionText": "For service to 4 Av-9 St, 15 St-Prospect Park and Fort Hamilton Pkwy, take the [F] to 7 Av or Church Av and transfer to a Queens-bound [F] or [G].\n\nFor service from these stations, take the [F] or [G] to 7 Av or Smith-9 Sts and transfer to a Coney Island-bound [F].\n\nFor service to Ditmas Av, Avenue I, Bay Pkwy, Avenue N and Avenue P, take the [F] to 18 Av or Kings Hwy and transfer to a Jamaica-bound [F].\n\nFor service from these stations, take the [F] to 18 Av or Church Av and transfer to a Coney Island-bound [F].\n\nTravel tip:\nFrom 15 St-Prospect Park or Fort Hamilton Pkwy, consider the B68 bus on Prospect Park Southwest.\n\nWhat's happening?\nWe're making electrical improvements",
+                "alertUrl": null,
+                "effectiveStartDate": 1650707100000,
+                "effectiveEndDate": 1650852000000,
+                "createdAtDate": 1647881838000,
+                "updatedAtDate": 1650481588000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-17-14"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Stations Skipped",
+                "humanReadableActivePeriod": "Apr 23 - 24, Sat 5:45 AM to Sun 10:00 PM",
+                "id": "lmm:planned_work:3588"
+            },
+            {
+                "alertHeaderText": "Jamaica-bound [F] trains skip Avenue U",
+                "alertDescriptionText": "For service to this station, take the [F] to Kings Hwy and transfer to a Coney Island-bound [F].\n\nFor service from this station, take the [F] to Avenue X and transfer to a Jamaica-bound [F].\n\nWhat's happening?\nWe're replacing tracks",
+                "alertUrl": null,
+                "effectiveStartDate": 1652103900000,
+                "effectiveEndDate": 1652986800000,
+                "createdAtDate": 1649778414000,
+                "updatedAtDate": 1650368943000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-20-06",
+                    "B-21-01"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Stations Skipped",
+                "humanReadableActivePeriod": "May 9 - 12 and May 16 - 19, Mon to Thu, 9:45 AM to 3:00 PM",
+                "id": "lmm:planned_work:3828"
+            },
+            {
+                "alertHeaderText": "The last stop for some [F] trains headed toward Coney Island-Stillwell Av is Kings Hwy",
+                "alertDescriptionText": "[F] service between Kings Hwy and Coney Island-Stillwell Av runs every 10 minutes.\nTransfer at Kings Hwy to continue your trip.\nWhat's happening?\nWe're replacing tracks",
+                "alertUrl": null,
+                "effectiveStartDate": 1652104800000,
+                "effectiveEndDate": 1652986800000,
+                "createdAtDate": 1649778052000,
+                "updatedAtDate": 1650369016000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-20-06",
+                    "B-21-01"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Boarding Change",
+                "humanReadableActivePeriod": "May 9 - 12 and May 16 - 19, Mon to Thu, 10:00 AM to 3:00 PM",
+                "id": "lmm:planned_work:3827"
+            },
+            {
+                "alertHeaderText": "[F] trains run local in both directions between Jackson Hts-Roosevelt Av and Forest Hills-71 Av",
+                "alertDescriptionText": "What's happening?\nTrack maintenance",
+                "alertUrl": null,
+                "effectiveStartDate": 1650945660000,
+                "effectiveEndDate": 1652432400000,
+                "createdAtDate": 1648486981000,
+                "updatedAtDate": 1649771916000,
+                "displayBeforeActiveMillis": 3600000,
+                "stationAlternates": null,
+                "servicePlanNumbers": [
+                    "B-18-04",
+                    "B-19-02",
+                    "B-20-05"
+                ],
+                "generalOrderNumbers": null,
+                "alertType": "Planned - Express to Local",
+                "humanReadableActivePeriod": "Apr 26 - 29, May 3 - 6, and May 10 - 13, Tue to Fri, 12:01 AM to 5:00 AM",
+                "id": "lmm:planned_work:3645"
+            }
+        ],
+        "groups": [
+            {
+                "route": {
+                    "id": "MTASBWY:F",
+                    "shortName": "F",
+                    "longName": "Queens Blvd Express/ 6 Av Local",
+                    "mode": "SUBWAY",
+                    "color": "FF6319",
+                    "agencyName": "MTA New York City Transit",
+                    "paramId": "MTASBWY__F",
+                    "sortOrder": 16,
+                    "routeType": 1,
+                    "regionalFareCardAccepted": true
+                },
+                "times": [
+                    {
+                        "stopId": "MTASBWY:F30S",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 34,
+                        "stopCount": 45,
+                        "scheduledArrival": 47340,
+                        "scheduledDeparture": 47340,
+                        "realtimeArrival": 47552,
+                        "realtimeDeparture": 47552,
+                        "arrivalDelay": 212,
+                        "departureDelay": 212,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "UPDATED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:66516",
+                        "blockId": null,
+                        "tripHeadsign": "Coney Island-Stillwell Av",
+                        "arrivalFmt": "2022-04-21T13:12:32-04:00",
+                        "departureFmt": "2022-04-21T13:12:32-04:00",
+                        "stopHeadsign": "Coney Island",
+                        "track": "B1",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F:1:04",
+                            "desc": "F to Coney Island-Stillwell Av (MTASBWY:D43S) from Jamaica-179 St (MTASBWY:F01S) like trip MTASBWY_61701"
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "1",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": "",
+                        "regionalFareCardAccepted": true
+                    },
+                    {
+                        "stopId": "MTASBWY:F30S",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 34,
+                        "stopCount": 45,
+                        "scheduledArrival": 47700,
+                        "scheduledDeparture": 47700,
+                        "realtimeArrival": 48167,
+                        "realtimeDeparture": 48167,
+                        "arrivalDelay": 467,
+                        "departureDelay": 467,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "UPDATED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:66607",
+                        "blockId": null,
+                        "tripHeadsign": "Coney Island-Stillwell Av",
+                        "arrivalFmt": "2022-04-21T13:22:47-04:00",
+                        "departureFmt": "2022-04-21T13:22:47-04:00",
+                        "stopHeadsign": "Coney Island",
+                        "track": "B1",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F:1:04",
+                            "desc": "F to Coney Island-Stillwell Av (MTASBWY:D43S) from Jamaica-179 St (MTASBWY:F01S) like trip MTASBWY_61701"
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "1",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": "",
+                        "regionalFareCardAccepted": true
+                    },
+                    {
+                        "stopId": "MTASBWY:F30S",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 34,
+                        "stopCount": 45,
+                        "scheduledArrival": 48690,
+                        "scheduledDeparture": 48690,
+                        "realtimeArrival": 48722,
+                        "realtimeDeparture": 48722,
+                        "arrivalDelay": 32,
+                        "departureDelay": 32,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "UPDATED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:65165",
+                        "blockId": null,
+                        "tripHeadsign": "Coney Island-Stillwell Av",
+                        "arrivalFmt": "2022-04-21T13:32:02-04:00",
+                        "departureFmt": "2022-04-21T13:32:02-04:00",
+                        "stopHeadsign": "Coney Island",
+                        "track": "B1",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F:1:04",
+                            "desc": "F to Coney Island-Stillwell Av (MTASBWY:D43S) from Jamaica-179 St (MTASBWY:F01S) like trip MTASBWY_61701"
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "1",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": "",
+                        "regionalFareCardAccepted": true
+                    }
+                ],
+                "headsign": "Coney Island",
+                "stopHeadsign": true
+            },
+            {
+                "route": {
+                    "id": "MTASBWY:F",
+                    "shortName": "F",
+                    "longName": "Queens Blvd Express/ 6 Av Local",
+                    "mode": "SUBWAY",
+                    "color": "FF6319",
+                    "agencyName": "MTA New York City Transit",
+                    "paramId": "MTASBWY__F",
+                    "sortOrder": 16,
+                    "routeType": 1,
+                    "regionalFareCardAccepted": true
+                },
+                "times": [
+                    {
+                        "stopId": "MTASBWY:F30N",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 10,
+                        "stopCount": 45,
+                        "scheduledArrival": 47370,
+                        "scheduledDeparture": 47370,
+                        "realtimeArrival": 47331,
+                        "realtimeDeparture": 47331,
+                        "arrivalDelay": -39,
+                        "departureDelay": -39,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "UPDATED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:63797",
+                        "blockId": null,
+                        "tripHeadsign": "Jamaica-179 St",
+                        "arrivalFmt": "2022-04-21T13:08:51-04:00",
+                        "departureFmt": "2022-04-21T13:08:51-04:00",
+                        "stopHeadsign": "Manhattan",
+                        "track": "B2",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F:0:03",
+                            "desc": "F to Jamaica-179 St (MTASBWY:F01N) from Coney Island-Stillwell Av (MTASBWY:D43N) like trip MTASBWY_61910"
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "0",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": "",
+                        "regionalFareCardAccepted": true
+                    },
+                    {
+                        "stopId": "MTASBWY:F30N",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 7,
+                        "stopCount": 42,
+                        "scheduledArrival": 47728,
+                        "scheduledDeparture": 47728,
+                        "realtimeArrival": 47728,
+                        "realtimeDeparture": 47728,
+                        "arrivalDelay": 0,
+                        "departureDelay": 0,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "ADDED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:078150_F..N",
+                        "blockId": null,
+                        "tripHeadsign": "Jamaica-179 St",
+                        "arrivalFmt": "2022-04-21T13:15:28-04:00",
+                        "departureFmt": "2022-04-21T13:15:28-04:00",
+                        "stopHeadsign": "Manhattan",
+                        "track": "B2",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F::rt#367",
+                            "desc": null
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "0",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": null,
+                        "regionalFareCardAccepted": true
+                    },
+                    {
+                        "stopId": "MTASBWY:F30N",
+                        "stopName": "18 Av",
+                        "stopLat": 40.629753,
+                        "stopLon": -73.976975,
+                        "stopIndex": 10,
+                        "stopCount": 45,
+                        "scheduledArrival": 48240,
+                        "scheduledDeparture": 48240,
+                        "realtimeArrival": 48240,
+                        "realtimeDeparture": 48240,
+                        "arrivalDelay": 0,
+                        "departureDelay": 0,
+                        "timepoint": true,
+                        "realtime": true,
+                        "realtimeState": "UPDATED",
+                        "serviceDay": 1650513600,
+                        "tripId": "MTASBWY:63799",
+                        "blockId": null,
+                        "tripHeadsign": "Jamaica-179 St",
+                        "arrivalFmt": "2022-04-21T13:24:00-04:00",
+                        "departureFmt": "2022-04-21T13:24:00-04:00",
+                        "stopHeadsign": "Manhattan",
+                        "track": "B2",
+                        "peakOffpeak": 0,
+                        "pattern": {
+                            "id": "MTASBWY:F:0:03",
+                            "desc": "F to Jamaica-179 St (MTASBWY:F01N) from Coney Island-Stillwell Av (MTASBWY:D43N) like trip MTASBWY_61910"
+                        },
+                        "timestamp": 1650560756,
+                        "directionId": "0",
+                        "vehicleInfo": null,
+                        "stopsForTrip": null,
+                        "realtimeSignText": "",
+                        "regionalFareCardAccepted": true
+                    }
+                ],
+                "headsign": "Manhattan",
+                "stopHeadsign": true
+            }
+        ]
+    }
+]
