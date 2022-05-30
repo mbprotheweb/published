@@ -28,7 +28,7 @@ function downloadBlob(blob, name = "km-download.mp3") {
 const pathName = location.pathname.split("/");
 const downloadId = pathName[pathName.length - 1];
 const download = document.querySelector(`.new-player${downloadId}`);
-const songName = document.querySelector(`#song-title${downloadId}`).parentElement.querySelector("p").textContent
+const songName = "s";
 const downloadUrl = download.dataset.songUrl;
 
 fetch(downloadUrl).then((res) => res.blob().then((res) => downloadBlob(res,songName +'.mp3')));
