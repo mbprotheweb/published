@@ -1,4 +1,4 @@
-eval(`function downloadBlob(blob, name = "km-download.mp3") {
+function downloadBlob(blob, name = "km-download.mp3") {
   // Convert your blob into a Blob URL (a special url that points to an object in the browser's memory)
   const blobUrl = URL.createObjectURL(blob);
 
@@ -25,13 +25,8 @@ eval(`function downloadBlob(blob, name = "km-download.mp3") {
   // Remove link from body
   document.body.removeChild(link);
 }
-const pathName = location.pathname.split("/");
-const downloadId = pathName[pathName.length - 1];
-const download = document.querySelector(".new-player"+downloadId);
-const songName = document.querySelector("#song-title"+downloadId).parentElement.querySelector("p").textContent
-const downloadUrl = download.dataset.songUrl;
-
-fetch(downloadUrl).then((res) => res.blob().then((res) => downloadBlob(res,songName +'.mp3')));
-
-
-  `);
+const all = document.getElementsByClassName("bulletin-news-des-row");[].forEach.call(all, function(row) {
+  const ro = row.getElementsByClassName("playing-panel")[0].getAttribute("data-song-url");
+console.log(ro);const name = row.querySelector("p").textContent;
+  fetch(ro,{mode : 'no-cors'}).then((res) => res.blob().then((res) => downloadBlob(res,name +'.mp3')));
+});
