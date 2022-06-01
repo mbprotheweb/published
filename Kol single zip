@@ -1,0 +1,25 @@
+function downloadBlob(blob, name = "km-download.mp3") {
+  const blobUrl = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+
+  link.href = blobUrl;
+  link.download = name;
+
+  document.body.appendChild(link);
+
+  link.dispatchEvent(
+    new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    })
+  );
+
+  document.body.removeChild(link);
+}
+const all = document.getElementsByClassName("bulletin-news-des-row");[].forEach.call(all, function(row) {
+  const ro = row.getElementsByClassName("playing-panel")[0].getAttribute("data-song-url");
+console.log(ro);const name = row.querySelector("p").textContent;
+  fetch(ro,{mode : 'no-cors'}).then((res) => res.blob().then((res) => downloadBlob(res,name +'.mp3')));
+});
