@@ -1,0 +1,24 @@
+function downloadBlob(blob, name = "km-download.mp3") {
+  const blobUrl = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+
+  link.href = blobUrl;
+  link.download = name;
+
+  document.body.appendChild(link);
+
+  link.dispatchEvent(
+    new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    })
+  );
+
+  document.body.removeChild(link);
+}
+function dl(e){var par = e.target.parentElement.parentElement.parentElement; fetch(par.getAttribute("data-song-url")).then(res => res.blob()).then(tem => downloadBlob(tem,par.parentElement.querySelector("p").textContent))}
+function setit(){
+var all = document.getElementsByClassName("playing-panel");
+[].forEach.call(all, function(row) {if(row.getElementsByClassName("cutitout").length > 0){return} var el = document.createElement("a");el.classList.add("cutitout");el.addEventListener("click", dl);el.innerHTML =  " Download";row.getElementsByClassName("play_button")[0].prepend(el)});}setit()
