@@ -59,8 +59,16 @@ function setit() {
     }
   });
 }
-  var pages = document.getElementsByClassName("my-pagination");
-  [].forEach.call(pages, function (page) {
-    page.addEventListener("click", function(){console.log("C");setit()});
+var paged = document.getElementsByClassName("sub-cat-paginate")[0];
+console.log(paged);
+var pages = document.getElementsByClassName("page");
+[].forEach.call(pages, function (page) {
+  page.addEventListener("click", function () {
+    console.log("C");
+    paged.addEventListener("DOMSubtreeModified", function () {
+      console.log("P");
+      setit();
+    });
   });
+});
 setit();
