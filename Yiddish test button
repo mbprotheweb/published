@@ -12,13 +12,55 @@ function downloadBlob(blob, name = "km-download.mp3") {
     new MouseEvent("click", {
       bubbles: true,
       cancelable: true,
-      view: window,
+      view: window
     })
   );
 
   document.body.removeChild(link);
 }
-function dl(e){var par = e.target.parentElement.parentElement.parentElement; fetch(par.getAttribute("data-song-url")).then(res => res.blob()).then(tem => downloadBlob(tem,par.parentElement.querySelector("p").textContent))}
-function setit(){
-var all = document.getElementsByClassName("playing-panel");
-[].forEach.call(all, function(row) {if(row.getElementsByClassName("cutitout").length > 0){return} var el = document.createElement("a");el.classList.add("cutitout");el.addEventListener("click", dl);el.innerHTML =  " Download";row.getElementsByClassName("play_button")[0].prepend(el)});}setit()
+function dl(e) {
+  var par = e.target.parentElement.parentElement.parentElement;
+  console.log(par);
+  var url = par.getAttribute("data-song-url");
+  var name;
+  try {
+    name =
+      par.parentElement.querySelector("h1").textContent +
+      " - " +
+      par.parentElement.querySelector("p").textContent;
+  } catch (e) {
+    name = par.getElementsByClassName("post-title")[0].innerHTML;
+  }
+  if (url == null) {
+    url = e.target.parentElement.parentElement.getAttribute("data-song-url");
+  }
+  fetch(url)
+    .then((res) => res.blob())
+    .then((tem) => downloadBlob(tem, name + ".mp3"));
+}
+function setit() {
+  var all = document.getElementsByClassName("playing-panel");
+  [].forEach.call(all, function (row) {
+    if (row.getElementsByClassName("cutitout").length > 0) {
+      return;
+    }
+    var el = document.createElement("a");
+    el.classList.add("cutitout");
+    el.addEventListener("click", dl);
+    el.innerHTML = " Download";
+    try {
+      row.getElementsByClassName("play_button")[0].prepend(el);
+    } catch (e) {
+      try {
+        row.getElementsByClassName("playBtn")[0].prepend(el);
+      } catch (e) {
+        return;
+      }
+    }
+  });
+}
+  var pages = document.getElementsByClassName("my-pagination");
+  [].forEach.call(pages, function (page) {
+    page.addEventListener("click", function(){console.log("C");setit()});
+  });
+setit();
