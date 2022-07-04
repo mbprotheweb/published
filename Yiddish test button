@@ -59,16 +59,10 @@ function setit() {
     }
   });
 }
-var paged = document.getElementsByClassName("sub-cat-paginate")[0];
-console.log(paged);
-var pages = document.getElementsByClassName("page");
-[].forEach.call(pages, function (page) {
-  page.addEventListener("click", function () {
-    console.log("C");
-    paged.addEventListener("DOMSubtreeModified", function () {
-      console.log("P");
-      setit();
-    });
-  });
+
+document.body.addEventListener("DOMSubtreeModified", function () {
+  console.log("P");
+  setit();
 });
+
 setit();
