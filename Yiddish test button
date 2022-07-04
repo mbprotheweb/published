@@ -59,8 +59,10 @@ function setit() {
   });
 }
 
-document.body.addEventListener("DOMSubtreeModified", function () {
-  setit();
-});
+document
+  .getElementsByClassName("root")[0]
+  .addEventListener("DOMSubtreeModified", function () {
+    setit();
+  });
 
 setit();
