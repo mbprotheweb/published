@@ -1,0 +1,94 @@
+function downloadBlob(blob, name = "km-download.mp3") {
+  const blobUrl = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+
+  link.href = blobUrl;
+  link.download = name;
+
+  document.body.appendChild(link);
+
+  link.dispatchEvent(
+    new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      view: window
+    })
+  );
+
+  document.body.removeChild(link);
+}
+function dl(e) {
+  var par = e.target.parentElement.parentElement.parentElement;
+  var url = par.getAttribute("data-song-url");
+  var name;
+  try {
+    name =
+      par.parentElement.querySelector("h1").textContent +
+      " - " +
+      par.parentElement.querySelector("p").textContent;
+  } catch (e) {
+    name = par.getElementsByClassName("post-title")[0].innerHTML;
+  }
+  if (url == null) {
+    url = e.target.parentElement.parentElement.getAttribute("data-song-url");
+  }
+  var ele = document.getElementById("lists");
+  var li = document.createElement("li");
+  li.classList.add("url-name");
+  li.setAttribute("url", url);
+  li.setAttribute("name", name);
+  var all = document.querySelectorAll("[url='" + url + "']");
+  if (all.length > 0) {
+    all[0].remove();
+    e.target.innerHTML = "Add To List";
+    return;
+  }
+  ele.appendChild(li);
+  e.target.innerHTML = "Remove From List";
+}
+function setit() {
+  var all = document.getElementsByClassName("playing-panel");
+  [].forEach.call(all, function (row) {
+    if (row.getElementsByClassName("cutitout").length > 0) {
+      return;
+    }
+    var el = document.createElement("a");
+    el.classList.add("cutitout");
+    el.addEventListener("click", dl);
+    el.innerHTML = " Add To List";
+    try {
+      row.getElementsByClassName("play_button")[0].prepend(el);
+    } catch (e) {
+      try {
+        row.getElementsByClassName("playBtn")[0].prepend(el);
+      } catch (e) {
+        return;
+      }
+    }
+  });
+}
+
+function down() {
+  var lists = document.getElementsByClassName("url-name");
+  console.log(lists);
+  [].forEach.call(lists, function (list) {
+    fetch(list.getAttribute("url"))
+      .then((res) => res.blob())
+      .then((tem) => downloadBlob(tem, list.getAttribute("name") + ".mp3"));
+  });$(".cutitout").html("Add To List");$("#lists").empty();
+}
+
+document
+  .getElementsByClassName("root")[0]
+  .addEventListener("DOMSubtreeModified", function () {
+    setit();
+  });
+var ele = document.createElement("ul");
+ele.id = "lists";
+var butt = document.createElement("a");
+butt.innerHTML = "Download All";
+butt.addEventListener("click", down);
+document.head.appendChild(ele);
+document.body.prepend(butt);
+setit();
