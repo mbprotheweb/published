@@ -1,41 +1,24 @@
-function zipit(urls){var zip = new JSZip();
-var count = 0;
-var zipFilename = "Yiddish24.zip";
+function zipit(urls) {
+  var zip = new JSZip();
+  var count = 0;
+  var zipFilename = "Yiddish24.zip";
 
-urls.forEach(function(url){
-  var filename = url[1];
-  // loading a file and add it in a zip file
-  JSZipUtils.getBinaryContent(url[0], function (err, data) {
-     if(err) {
+  urls.forEach(function (url) {
+    var filename = url[1];
+    // loading a file and add it in a zip file
+    JSZipUtils.getBinaryContent(url[0], function (err, data) {
+      if (err) {
         throw err; // or handle the error
-     }
-     zip.file(filename + ".mp3", data, {binary:true});
-     count++;
-     if (count == urls.length) {
-       zip.generateAsync({type:'blob'}).then(function(content) {
+      }
+      zip.file(filename + ".mp3", data, { binary: true });
+      count++;
+      if (count == urls.length) {
+        zip.generateAsync({ type: "blob" }).then(function (content) {
           saveAs(content, zipFilename);
-       });
-    }
+        });
+      }
+    });
   });
-});}function downloadBlob(blob, name = "km-download.mp3") {
-  const blobUrl = URL.createObjectURL(blob);
-
-  const link = document.createElement("a");
-
-  link.href = blobUrl;
-  link.download = name;
-
-  document.body.appendChild(link);
-
-  link.dispatchEvent(
-    new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      view: window
-    })
-  );
-
-  document.body.removeChild(link);
 }
 function dl(e) {
   var par = e.target.parentElement.parentElement.parentElement;
@@ -57,6 +40,7 @@ function dl(e) {
   li.classList.add("url-name");
   li.setAttribute("url", url);
   li.setAttribute("name", name);
+  li.innerHTML = name;
   var all = document.querySelectorAll("[url='" + url + "']");
   if (all.length > 0) {
     all[0].remove();
@@ -72,10 +56,17 @@ function setit() {
     if (row.getElementsByClassName("cutitout").length > 0) {
       return;
     }
+    var oldurl = $(row).attr("data-song-url");
+    var is = $("#lists").children("[url='" + oldurl + "']");
     var el = document.createElement("a");
+    if (is.length > 0) {
+      el.innerHTML = "Remove From List";
+    } else {
+      el.innerHTML = "Add To List";
+    }
     el.classList.add("cutitout");
     el.addEventListener("click", dl);
-    el.innerHTML = " Add To List";
+
     try {
       row.getElementsByClassName("play_button")[0].prepend(el);
     } catch (e) {
@@ -90,10 +81,13 @@ function setit() {
 
 function down() {
   var lists = document.getElementsByClassName("url-name");
-  console.log(lists);var arr = [];
+  var arr = [];
   [].forEach.call(lists, function (list) {
-    arr.push([list.getAttribute("url"),list.getAttribute("name")]);
-  });zipit(arr);$(".cutitout").html("Add To List");$("#lists").empty();
+    arr.push([list.getAttribute("url"), list.getAttribute("name")]);
+  });
+  zipit(arr);
+  $(".cutitout").html("Add To List");
+  $("#lists").empty();
 }
 
 document
@@ -106,6 +100,19 @@ ele.id = "lists";
 var butt = document.createElement("a");
 butt.innerHTML = "Download All";
 butt.addEventListener("click", down);
-document.head.appendChild(ele);
-document.body.prepend(butt);var s1 = document.createElement("script");s1.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js";document.body.appendChild(s1);var s2 = document.createElement("script");s2.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js";document.body.appendChild(s2);var s3 = document.createElement("script");s3.src = "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js";document.body.appendChild(s3);
+var dim = document.createElement("div");
+document.body.prepend(dim);
+document.body.prepend(ele);
+document.body.prepend(butt);
+var s1 = document.createElement("script");
+s1.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js";
+document.body.appendChild(s1);
+var s2 = document.createElement("script");
+s2.src =
+  "https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js";
+document.body.appendChild(s2);
+var s3 = document.createElement("script");
+s3.src =
+  "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js";
+document.body.appendChild(s3);
 setit();
