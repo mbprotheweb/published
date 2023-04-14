@@ -31,7 +31,7 @@ async function run(perm) {
   }
 }
 
-var a = document.getElementById("recordnum").href;
+var a = document.getElementById("recordnum")?.href;
 if (!a) {
   alert("This page is not a valid book page");
 } else {
