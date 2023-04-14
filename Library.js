@@ -23,7 +23,7 @@ async function run(perm) {
 
   const text = await response.json();
 
-  if (text.Rows.length > 0) {
+  if (text ? .Rows ? .length > 0) {
     alert("Book added, Please sync to see changes");
   } else {
 
@@ -32,4 +32,8 @@ async function run(perm) {
 }
 
 var a = document.getElementById("recordnum").href;
-run(a);
+if (!a) {
+  alert("This page is not a valid book page");
+} else {
+  run(a);
+}
