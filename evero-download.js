@@ -103,7 +103,7 @@ const requestBody = {
         });
         var ready = newArray.map(row => row.join("	")).join("\n");
         await navigator.clipboard.writeText(ready);
-        alert(newArray.length + " Rows Copied to clipboard!\nGo to an excel/google sheet and press CTRL + V to paste. ");
+        alert(newArray.length + " Rows Copied to clipboard!\nGo to an Excel/google sheet and press CTRL + V to paste.");
     } catch (error) {
         // Handle any errors here
         console.error(error);
