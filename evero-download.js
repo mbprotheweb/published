@@ -41,13 +41,21 @@ function diffInDays(date1, date2) {
 }
 
 // Get program id
-var program = document.querySelector("#ProgramDDL");
-var programValue = Object.entries(program).find(a => a[0].startsWith("jQuery") && !!a[1].$selectController)[1].$selectController.readValue();
-var programId = programValue.TherapyID;
-var programName = programValue.TherapyType;
-if (!programId) {
-    alert("Please select a valid program.");
-    throw Error("Please select a valid program.");
+// var program = document.querySelector("#ProgramDDL");
+// var programValue = Object.entries(program).find(a => a[0].startsWith("jQuery") && !!a[1].$selectController)[1].$selectController.readValue();
+// var programId = programValue.TherapyID;
+// var programName = programValue.TherapyType;
+var programIds = {
+    486: "IS-CW-CFASS-Caregiver/Fam Adv Supp Serv",
+    487: "IS-CW-Community Habilitation",
+    494: "IS-CW-Prevocational Services",
+    490: "IS-CW-Respite Planned Individual"
+};
+var programPromp = Number(prompt("Please enter the Program Id\n" + programIds.map(a=>a.join("-")).join("\n"), 486));
+var programName = programIds[programPromp];
+if (!programName) {
+    alert("Please enter a valid program.");
+    throw Error("Please enter a valid program.");
 }
 var siteID = 1696;
 
@@ -81,7 +89,7 @@ do {
 var requestBody = {
     SiteID: siteID,
     ClientID: 0,
-    TherapyID: programId,
+    TherapyID: programPromp,
     StartDate: startDate.toISOString(),
     EndDate: endDate.toISOString(),
     filterType: "All",
