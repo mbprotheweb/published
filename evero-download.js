@@ -51,7 +51,7 @@ var programIds = {
     494: "IS-CW-Prevocational Services",
     490: "IS-CW-Respite Planned Individual"
 };
-var programPromp = Number(prompt("Please enter the Program Id\n" + programIds.map(a=>a.join("-")).join("\n"), 486));
+var programPromp = Number(prompt("Please enter the Program Id\n" + Object.entries(programIds).map(a=>a.join("-")).join("\n"), 486));
 var programName = programIds[programPromp];
 if (!programName) {
     alert("Please enter a valid program.");
