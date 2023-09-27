@@ -78,7 +78,7 @@ do {
 } while (diffInDays(startDate, endDate) > 91);
 
 // Example usage:
-const requestBody = {
+var requestBody = {
     SiteID: siteID,
     ClientID: 0,
     TherapyID: programId,
