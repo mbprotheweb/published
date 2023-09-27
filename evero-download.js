@@ -109,6 +109,7 @@ var requestBody = {
             var { ClientName, Staff, TimeStartText, TimeEndText, NoServicesDoneBillable, ActualDuration, BusClientLogDateString } = row;
             return [ClientName, Staff, programName, BusClientLogDateString, TimeStartText, TimeEndText, ActualDuration, NoServicesDoneBillable];
         });
+        newArray = newArray.sort();
         var ready = newArray.map(row => row.join("	")).join("\n");
         await navigator.clipboard.writeText(ready);
         alert(newArray.length + " Rows Copied to clipboard!\nGo to a Excel/google sheet and press CTRL + V to paste.");
