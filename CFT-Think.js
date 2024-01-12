@@ -43,7 +43,7 @@ var elements = document.querySelectorAll('form[data-radio-buttons-field-options-
 [].forEach.call(elements, function (ele, index) {
   var a = ans[index];
   var opt = ele.children[a - 1];
-  var inp = opt.getElementsByTagName("input");
+  var inp = opt.getElementsByTagName("input")[0];
   inp.click();
   console.log(index + " " + a);
 });
